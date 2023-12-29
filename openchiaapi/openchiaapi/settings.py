@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'openchiaapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'database' in django_settings:
+if 1==0:
     database = django_settings['database']
     DATABASES = {
         'default': {
@@ -112,19 +112,19 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'pool',
-            'USER': 'pool',
-            'PASSWORD': 'abcd1234',
-            'HOST': 'localhost',
+            'NAME': 'chia',
+            'USER': 'sametklou',
+            'PASSWORD': 'Sametklou123?',
+            'HOST': '127.0.0.1',
             'PORT': 5432,
         }
     }
 
 
 if 'influxdb' in django_settings:
-    INFLUXDB_URL = django_settings['influxdb']['url']
-    INFLUXDB_TOKEN = django_settings['influxdb']['token']
-    INFLUXDB_ORG = django_settings['influxdb']['org']
+    INFLUXDB_URL = "127.0.0.1:8086"
+    INFLUXDB_TOKEN = "GgSWj8QJKdMquYL4weUdw-akc-WFvS-9URamiOBtbWjuLBd3xW2Npc1rJxjw6tQhC_RsxezbQYRJk74yTnABaw=="
+    INFLUXDB_ORG = "chia"
 
 
 # Password validation
@@ -172,7 +172,7 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-POOL_URL = django_settings.get('pool_url') or 'http://localhost:8080'
+POOL_URL = django_settings.get('pool_url') or 'https://chia.pool.energy'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ASGI_APPLICATION = "openchiaapi.asgi.application"
