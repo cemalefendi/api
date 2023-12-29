@@ -52,9 +52,9 @@ def get_pool_target_address():
 
 def get_influxdb_client():
     client = InfluxDBClient(
-        url=settings.INFLUXDB_URL,
-        token=settings.INFLUXDB_TOKEN,
-        org=settings.INFLUXDB_ORG,
+        url="127.0.0.1:8086",
+        token="GgSWj8QJKdMquYL4weUdw-akc-WFvS-9URamiOBtbWjuLBd3xW2Npc1rJxjw6tQhC_RsxezbQYRJk74yTnABaw==",
+        org="chia",
         ssl=getattr(settings, 'INFLUXDB_SSL', False),
         verify_ssl=getattr(settings, 'INFLUXDB_VERIFY_SSL', False),
     )
