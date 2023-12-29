@@ -17,7 +17,7 @@ SECRET_KEY = django_settings.get('secret_key') or 'django-insecure'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = django_settings.get('debug', False)
 
-ALLOWED_HOSTS = django_settings.get('allowed_hosts') or ['localhost']
+ALLOWED_HOSTS = ["pool.energy" ]
 
 # Application definition
 
@@ -172,7 +172,7 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-POOL_URL = django_settings.get('pool_url') or 'https://chia.pool.energy'
+POOL_URL = "https://chia.pool.energy"
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ASGI_APPLICATION = "openchiaapi.asgi.application"
