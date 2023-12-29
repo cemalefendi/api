@@ -1,4 +1,4 @@
-http://%%DOMAIN%%:8001 {
+http://pool.energy:8001 {
 
         root * /root/api
 
